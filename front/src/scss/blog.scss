@@ -1,0 +1,33 @@
+.btn-category {
+  width: 100% !important;
+}
+// .typography-font {
+//   letter-spacing: normal !important;
+//   position: static !important;
+// }
+
+.btn-card {
+  background-color: white;
+  border: 0;
+  padding: 6px 8px;
+  text-decoration: none;
+
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(245, 245, 245);
+  }
+  &:active {
+    background-color: rgb(220, 220, 220);
+  }
+}
+
+// .btn-card:hover {
+//   background-color: orange !important;
+// }
+
+// .btn-card:focus {
+//   background-color: red !important;
+// }
+// .css-1y942vo-MuiButtonBase-root-MuiButton-root {
+//   all: initial;
+// }

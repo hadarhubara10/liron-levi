@@ -1,0 +1,16 @@
+.btn-share-modal {
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(245, 245, 245);
+  }
+  &:active {
+    background-color: rgb(220, 220, 220);
+  }
+}

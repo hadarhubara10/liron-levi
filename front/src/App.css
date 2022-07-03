@@ -1,0 +1,10 @@
+.App {
+  /* text-align: center; */
+}
+* {
+  direction: rtl;
+  font-family: 'Varela Round', sans-serif !important;
+}
+img {
+  max-width: 100%;
+}

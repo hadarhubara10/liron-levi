@@ -1,0 +1,17 @@
+.contact {
+  background-color: var(--color-pink);
+  text-align: center;
+}
+.text-field {
+  width: calc(100% - 20px);
+  direction: rtl;
+}
+.paper-contact {
+  background-color: rgb(48, 48, 48) !important;
+  &:hover {
+    background-color: black !important;
+  }
+}
+.grid-input {
+  margin-bottom: 20px !important;
+}
