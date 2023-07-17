@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import '../../scss/shareModal.scss';
@@ -17,7 +16,6 @@ import {
   TwitterIcon,
 } from 'react-share';
 
-import { IconButton } from '@mui/material';
 import ShareIcon from '@mui/icons-material/Share';
 
 const style = {
@@ -35,7 +33,7 @@ const style = {
 };
 
 export default function ShareModal({ post }) {
-  const shareURL = 'https://liron-levi.herokuapp.com';
+  const shareURL = process.env.REACT_APP_API_URL;
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -43,43 +41,43 @@ export default function ShareModal({ post }) {
 
   return (
     <>
-      <div className="btn-share-modal" onClick={handleOpen} aria-label="share">
-        <ShareIcon size="small" />
+      <div className='btn-share-modal' onClick={handleOpen} aria-label='share'>
+        <ShareIcon size='small' />
       </div>
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography id='modal-modal-title' variant='h6' component='h2'>
             שתפי את המאמר - {post.title}
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography id='modal-modal-description' sx={{ mt: 2 }}>
             <FacebookShareButton
               url={`${shareURL}/blog/${post._id}`}
-              children={<FacebookIcon size="36" round="true"></FacebookIcon>}
+              children={<FacebookIcon size='36' round='true'></FacebookIcon>}
             />
             &nbsp;
             <EmailShareButton
               url={`${shareURL}/blog/${post._id}`}
-              children={<EmailIcon size="36" round="true"></EmailIcon>}
+              children={<EmailIcon size='36' round='true'></EmailIcon>}
             />
             &nbsp;
             <WhatsappShareButton
               url={`${shareURL}/blog/${post._id}`}
-              children={<WhatsappIcon size="36" round="true"></WhatsappIcon>}
+              children={<WhatsappIcon size='36' round='true'></WhatsappIcon>}
             />
             &nbsp;
             <TelegramShareButton
               url={`${shareURL}/blog/${post._id}`}
-              children={<TelegramIcon size="36" round="true"></TelegramIcon>}
+              children={<TelegramIcon size='36' round='true'></TelegramIcon>}
             />
             &nbsp;
             <TwitterShareButton
               url={`${shareURL}/blog/${post._id}`}
-              children={<TwitterIcon size="36" round="true"></TwitterIcon>}
+              children={<TwitterIcon size='36' round='true'></TwitterIcon>}
             />
           </Typography>
         </Box>
